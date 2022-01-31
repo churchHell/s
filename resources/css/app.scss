@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.color{
+    &-default{
+        i{
+            @apply text-default-lightest
+        }
+        @apply bg-default hover:bg-default-dark focus-within:bg-default-dark text-white
+    }
+    &-accent{
+        i{
+            @apply text-accent-lightest
+        }
+        input {
+            @apply text-white placeholder-accent-lightest
+        }
+        @apply bg-accent hover:bg-accent-dark focus-within:bg-accent-dark text-white rounded shadow-md
+    }
+    &-info{
+        @apply bg-info hover:bg-info-dark focus-within:bg-info-dark text-info-darkest rounded shadow-md
+    }
+    &-error{
+        @apply bg-error hover:bg-error-dark focus-within:bg-error-dark text-error-darkest rounded shadow-md
+    }
+    &-success{
+        @apply bg-success hover:bg-success-dark focus-within:bg-success-dark text-success-darkest rounded shadow-md
+    }
+}
+
+.btn{
+
+    &.danger{
+        @apply bg-red-400
+    }
+
+    &.success{
+        @apply bg-green-400
+    }
+
+    @apply rounded shadow cursor-pointer whitespace-nowrap
+}
+
+.xs{
+    @apply px-2
+}
+
+.s{
+   @apply py-1 px-4
+}
+
+.m{
+    @apply py-2 px-8 
+}
+
+.l{
+    @apply py-3 px-12 text-2xl uppercase
+}
+
+button{
+    i.preloader{
+        @apply hidden
+    }
+    &.loading{
+        i.preloader{
+            @apply block absolute animate-spin
+        }
+        span{
+            @apply invisible
+        }
+    }
+}
+
+input {
+    @apply outline-none
+}
+
+i.fas{
+    &.fa-fw{
+        @apply flex items-center justify-center
+    }
+    @apply leading-normal
+}
+
+h{
+    &1{
+        @apply uppercase text-center font-bold text-lg
+    }
+}
